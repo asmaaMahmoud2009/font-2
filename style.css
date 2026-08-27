@@ -1,0 +1,343 @@
+/* =========================
+   Reset
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================
+   Variables
+========================= */
+
+:root {
+  --bg: #eef2f7;
+  --card: #ffffff;
+  --text: #202938;
+  --muted: #748094;
+  --accent: #667eea;
+  --accent-dark: #5367d7;
+  --border: #e5e9f0;
+}
+
+
+/* =========================
+   Body
+========================= */
+
+body {
+  min-height: 100vh;
+
+  font-family:
+    "Cairo",
+    "Segoe UI",
+    Tahoma,
+    Arial,
+    sans-serif;
+
+  color: var(--text);
+
+  background: var(--bg);
+
+  transition:
+    background 0.5s ease;
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.container {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+}
+
+
+/* =========================
+   Quote Card
+========================= */
+
+.quote-card {
+  width: min(100%, 680px);
+
+  background: var(--card);
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 24px;
+
+  padding: 42px;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 55px rgba(31, 41, 55, 0.12);
+
+  transition:
+    background 0.5s ease,
+    transform 0.25s ease,
+    box-shadow 0.5s ease;
+}
+
+
+/* تأثير عند وضع الماوس */
+
+.quote-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 25px 65px rgba(31, 41, 55, 0.15);
+}
+
+
+/* =========================
+   Quote Icon
+========================= */
+
+.quote-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 12px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(102, 126, 234, 0.1);
+
+  color: var(--accent);
+
+  font-size: 48px;
+
+  line-height: 1;
+
+  font-family: Georgia, serif;
+}
+
+
+/* =========================
+   Title
+========================= */
+
+h1 {
+  font-size: clamp(28px, 5vw, 38px);
+
+  margin-bottom: 4px;
+}
+
+
+/* =========================
+   Subtitle
+========================= */
+
+.subtitle {
+  color: var(--muted);
+
+  font-size: 15px;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================
+   Quote Box
+========================= */
+
+.quote-box {
+  min-height: 190px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 24px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  background: rgba(248, 250, 252, 0.75);
+}
+
+
+/* =========================
+   Quote Text
+========================= */
+
+.quote-text {
+  font-size: clamp(20px, 3vw, 28px);
+
+  line-height: 1.9;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   Author
+========================= */
+
+.author {
+  margin-top: 16px;
+
+  color: var(--accent-dark);
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   Buttons Container
+========================= */
+
+.actions {
+  display: flex;
+
+  gap: 12px;
+
+  justify-content: center;
+
+  margin-top: 26px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.btn {
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 13px 24px;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* Hover */
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Click */
+
+.btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================
+   New Quote Button
+========================= */
+
+.primary {
+  background: var(--accent);
+
+  color: white;
+}
+
+
+.primary:hover {
+  background: var(--accent-dark);
+}
+
+
+/* =========================
+   Copy Button
+========================= */
+
+.secondary {
+  background: #edf0f5;
+
+  color: var(--text);
+}
+
+
+.secondary:hover {
+  background: #e1e5ec;
+}
+
+
+/* =========================
+   Message
+========================= */
+
+.message {
+  min-height: 25px;
+
+  margin-top: 16px;
+
+  color: #218739;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 520px) {
+
+  .container {
+    padding: 16px;
+  }
+
+
+  .quote-card {
+    padding: 28px 18px;
+
+    border-radius: 20px;
+  }
+
+
+  .quote-box {
+    padding: 20px 14px;
+
+    min-height: 210px;
+  }
+
+
+  .actions {
+    flex-direction: column;
+  }
+
+
+  .btn {
+    width: 100%;
+  }
+
+}
