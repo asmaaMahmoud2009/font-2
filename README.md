@@ -1,4 +1,4 @@
-# Quote Generator ✨
+# Quote Generator
 
 ## فكرة المشروع
 
